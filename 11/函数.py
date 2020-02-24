@@ -30,7 +30,7 @@ def quadratic(a,b,c):
         bx = b * x
         cx = c
     return ax,bx,cx
-# here
+
 
     
         
