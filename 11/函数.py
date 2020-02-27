@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 f = int(input('abs:'))
 def know(F):
     if not isinstance(F, (int, float)):
@@ -36,14 +39,23 @@ def quadratic(a,b,c):
         cx = c
     return ax,bx,cx
 
-o = int(input('底数:'))
-p = int(input('指数:'))
-def power(h, n): # 2
+def power(h, n=2):
     s = 1
-    if not isinstance(h,n, (int, float)):
-        raise TypeError('bad operand type')
     while n > 0:
         n = n - 1
         s = s * h
     return s
-print(power(o,p))
+o = (float(input('底数：')),float(input('指数:'))) # o = float(input('\'#请用逗号隔开\'底数,指数:'))
+print(power(o))
+
+def enroll(name,gender,age=6,city='Beijing'):
+    print('name:',name)
+    print('gender:',gender)
+    print('age:',age)
+    print('city:',city)
+
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
